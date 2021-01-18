@@ -1,0 +1,26 @@
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+    position: relative;
+    height: 37px;
+}
+
+#name-product {
+    font-size: 14px;
+    position: absolute;
+    color: #cccccc;
+    right: 3vw;
+}
+
+.navbar-brand {
+    color: #cccccc;
+    font-size: 15px;
+    position: absolute;
+    padding-left: 2vw;
+}
+
+.navbar-brand:hover {
+    color: #8C30F5 !important;
+}

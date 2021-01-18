@@ -1,0 +1,52 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 70px;
+    color: #fff;
+}
+
+
+.navbar-toggler{
+    color: #fff;
+}
+
+.navbar {
+    background: #1C1C24;
+    position: relative;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    padding-left: 30px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #8C30F5;
+}
+
+.nav-item{
+    padding-left: 20px;
+}
+#login-btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 0px;
+    background-color: #F1E4FF;
+    color: #8C30F5;
+    width: 100px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+#login-btn:hover {
+    border: none;
+    color: #F1E4FF;
+    background-color: #8C30F5;
+}

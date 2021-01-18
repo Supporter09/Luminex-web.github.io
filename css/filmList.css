@@ -1,0 +1,23 @@
+* {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #131419;
+  justify-content: space-around;
+}
+
+#label {
+  color: #cccccc;
+  justify-content: flex-start;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#label:hover{
+  color: white;
+  justify-content: flex-start;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  cursor: default;
+}

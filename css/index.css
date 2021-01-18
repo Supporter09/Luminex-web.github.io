@@ -1,0 +1,16 @@
+*{
+    display: block;
+}
+
+#container{
+    background-color: #131419
+}
+
+popular-film {
+    /* margin-top: 56px; */
+    margin-bottom: 20px;
+}
+
+/* film-list{
+    margin-bottom: 50px;
+} */

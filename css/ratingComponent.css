@@ -1,0 +1,59 @@
+.row {
+  color: #cccccc;
+  margin-top: 5vh;
+  background-color: #1c1c24;
+  height: 25vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.component {
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.component h3 {
+  font-size: 7vh;
+  line-height: 21vh;
+}
+
+#name {
+  cursor: pointer;
+}
+
+#name:hover {
+  color: #4fc2b1;
+  transition: color 0.6s;
+  /* animation */
+}
+
+#image:hover {
+  border: 2px white solid;
+  transition: border 0.6s;
+  cursor: pointer;
+}
+
+#ranking {
+  color: #39538f;
+}
+
+#rating {
+  color: #a8ab57;
+  cursor: default;
+}
+
+.component h2 {
+  line-height: 21vh;
+  font-size: 5vh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+img {
+  object-fit: cover;
+  height: 21vh;
+}

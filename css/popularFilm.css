@@ -1,0 +1,88 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    background-color: #1C1C24;
+    border-radius: 10px;
+}
+
+#label{
+    color: #cccccc;
+    font-size: 24px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+#label:hover{
+    color: white;
+    cursor: default;
+}
+
+.container{
+    background-color: #131419;
+}
+
+#popular-container {
+    height: 260px;
+    cursor: pointer;
+}
+
+#popular-container:hover{
+    transform: scale(1.01, 1.01);
+    transition: transform .5s;
+}
+
+.row {
+    padding: 10px 20px;
+}
+
+#imgBox {
+    padding: 10px 20px;
+    max-height: 240px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#imgBox img {
+    max-height: 220px;
+    justify-content: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+#image:hover{
+    border: 3px #cccccc solid;
+    transition-duration: 1s;
+}
+
+#filmInformation {
+    display: block;
+    max-height: 240px;
+    right: 0px;
+}
+
+#name-popular-film {
+    margin-top: 35px;
+    text-align: left;
+    line-height: 40px;
+    font-size: 40px;
+    font-style: italic;
+}
+
+#description {
+    text-align: left;
+    font-size: 15px;
+    height: 100px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+#release {
+    margin-top: -10px;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 15px;
+}

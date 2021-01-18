@@ -1,0 +1,20 @@
+
+.container{
+    color: white;
+    margin-top: 90px;
+    font-size: 7vh;
+    text-align: center;
+    margin-bottom: 50px;
+    cursor: default;
+}
+
+.row{
+    background-color: #271166;
+    height: 15vh;
+    border-radius: 20px;
+}
+
+.row > div {
+    height: 15vh;
+    line-height: 15vh;
+}

@@ -1,0 +1,11 @@
+#filmListSearch{
+    /* background-color: #1C1C24; */
+    margin-left: 1vw;
+    border-radius: 10px;
+    /* border: 1px #cccccc solid; */
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
