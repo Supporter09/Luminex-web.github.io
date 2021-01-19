@@ -1,11 +1,14 @@
 import validateEmail from '../utils.js'
 import InputWrapper from "./InputWrapper.js";
-
+import NavbarFilter from "./Navbar.js"
+import FooterDiv from "./Footer.js"
 const $template = document.createElement('template');
 // <-- Khi submit thi chuyen den duong dan trong attr action cua form -->
 $template.innerHTML = /*html*/ `
 <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
     <link rel="stylesheet" href="./css/register-form.css">
+    <navbar-filter></navbar-filter>
+	<br></br>
     <div class="signup-form">
         <form action="" id="register-form">
             <h2>Sign Up</h2>
@@ -30,9 +33,10 @@ $template.innerHTML = /*html*/ `
             </div>
             <p class="small text-center">By clicking the Sign Up button, you agree to our <br><a href="#">Terms &amp; Conditions</a>, and <a href="#">Privacy Policy</a></p>
         </form>
-        <div class="text-center">Already have an account? <a href="#!/log-in">Login here</a></div>
+        <div class="text-center">Already have an account? <a href="#!/sign-in">Login here</a></div>
     </div>
-    
+    <br></br>
+	<footer-div></footer-div>
     
 `
 
@@ -58,7 +62,7 @@ export default class RegisterForm extends HTMLElement {
             // console.log(this.$email.value());
             let email = this.$email.value();
             let nickname = this.$nickname.value();
-            let name = this.$password.value();
+            let name = this.$name.value();
             let password = this.$password.value();
             let passwordConfirmation = this.$passwordConfirmation.value();
             // if (email == '') {
@@ -77,17 +81,21 @@ export default class RegisterForm extends HTMLElement {
                 (InputWrapper.checkForm(this.$passwordConfirmation, (value) => value != '', 'Nhap lai xac nhan mat khau') &&
                     InputWrapper.checkForm(this.$passwordConfirmation, (value) => value == password, 'Mat khau xac nhan khong chinh xac'))
 
-            console.log(isPassed)
+            
             if (isPassed) {
                 console.log(email)
                 console.log(password)
+                var num = Math.floor(Math.random() * 9999999999999999);
                 firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
                     firebase.firestore().collection('users').add({
-                        id: CryptoJS.MD5(password).toString(),
+                        id: num,
                         nickname: nickname,
                         name: name,
                         email: email,
                         password: CryptoJS.MD5(password).toString(),
+                        linkFb: '',
+                        linkTwitter: '',
+                        linkVk: '',
                         avatar: "https://lh3.googleusercontent.com/pw/ACtC-3c62Ub_pEImDAGnAMUTc0V1UBj3Zwoyahb57mNbkR05x4aYOob-h-dOQYdnb2mcYe8XCO1C43JpeFKzKjykj_WS8z_4AUvYkactJmq_rsZq4O6SxvO-VQH48o39GgCDtHzks-cwE84_6IDqCk0BqdfA=s903-no?authuser=0"
                     }).catch(function (error) {
                         // Handle Errors here.
@@ -99,7 +107,8 @@ export default class RegisterForm extends HTMLElement {
                         // ...
                     })
 
-
+                alert("Đăng kí thành công");
+                window.location.href = './'
                 }).catch(function (error) {
                     // Handle Errors here.
                     var errorCode = error.code;

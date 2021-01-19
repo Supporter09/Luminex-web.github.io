@@ -5,7 +5,7 @@ $templateFooter.innerHTML = /*html*/ `
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <nav class="navbar fixed-bottom navbar-dark bg-dark">
     <a id="name-product">A product by Team3</a>
-    <a class="navbar-brand" href="#!/">Netflix</a>
+    <a class="navbar-brand" href="#!/">Luminex</a>
   </nav>
 `;
 

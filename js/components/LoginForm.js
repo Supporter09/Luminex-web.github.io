@@ -1,4 +1,4 @@
-import validateEmail from '../utils.js'
+import validateEmail, { getDataFromDoc, getDataFromDocs } from '../utils.js'
 import InputWrapper from "./InputWrapper.js";
 import NavbarFilter from "./Navbar.js"
 import FooterDiv from "./Footer.js"
@@ -121,9 +121,10 @@ export default class RegisterForm extends HTMLElement {
             // console.log(this.$email.value());
             let email = this.$email.value;
             let password = this.$password.value;
-            console.log(email,password)
+
+			
             // if (email == '') {
-            //     this.$email.alertError('Nhập email của bạn')
+            //     this.$email.alertError('Nhập email của bạn')	
             // }else{
             //     this.$email.alertError('');
             // }
@@ -134,7 +135,12 @@ export default class RegisterForm extends HTMLElement {
 
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then((user) => {
-                    // Signed in 
+					var encodedPass = '';
+					for(let i  = 0; i < password.split('').length; i++) {
+						encodedPass += '*';
+					}
+					// Signed in 
+					localStorage.setItem('pass', encodedPass);
 					console.log("Sign In Succesfully")
 					window.location.href = "./"
                     // ...
